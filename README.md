@@ -2,7 +2,8 @@
 This is Deakin personal SIT305 Assignment 2
 
 # About us
-SID217449804
+SID 217449804
 
 # Directory structure explanation too please.
-Java Class
+Java Class: app/src/main/java/com/example/user/prtice/
+
