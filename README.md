@@ -5,3 +5,4 @@ This is Deakin personal SIT305 Assignment 2
 SID217449804
 
 # Directory structure explanation too please.
+Java Class
