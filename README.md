@@ -5,5 +5,5 @@ This is Deakin personal SIT305 Assignment 2
 SID 217449804
 
 # Directory structure explanation too please.
-Java Class: app/src/main/java/com/example/user/prtice/
-
+Java Class: SIT-305-Assignment-2/app/src/main/java/com/example/user/prtice/
+Res and layout : SIT-305-Assignment-2/app/src/main/res/
