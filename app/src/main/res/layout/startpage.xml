@@ -11,20 +11,21 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="33dp"
-        android:layout_marginRight="33dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
         android:text="0"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Hungry"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/NewDay"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:layout_marginTop="39dp"
         android:layout_marginBottom="54dp"
-        android:layout_marginTop="38dp"
         android:text="Newdays"
         app:layout_constraintBottom_toBottomOf="@+id/Exit"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,8 +36,8 @@
         android:id="@+id/Hunt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="28dp"
         android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
         android:text="Hunt"
         app:layout_constraintBaseline_toBaselineOf="@+id/Drink"
         app:layout_constraintStart_toStartOf="parent" />
@@ -45,17 +46,17 @@
         android:id="@+id/Drink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="27dp"
+        android:layout_marginBottom="235dp"
         android:text="Drink"
-        app:layout_constraintBottom_toTopOf="@+id/Eat"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/Eat" />
 
     <Button
         android:id="@+id/Adventure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="33dp"
         android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
         android:text="Adventure"
         app:layout_constraintBaseline_toBaselineOf="@+id/Eat"
         app:layout_constraintStart_toStartOf="parent" />
@@ -64,31 +65,32 @@
         android:id="@+id/Eat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="27dp"
-        android:text="Eat Some"
+        android:text="Eat Some "
+        android:onClick="Eat_Some"
         app:layout_constraintStart_toEndOf="@+id/Adventure"
-        app:layout_constraintTop_toTopOf="@+id/Items" />
+        app:layout_constraintTop_toBottomOf="@+id/Drink" />
 
     <Button
         android:id="@+id/Items"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="187dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginRight="22dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginBottom="27dp"
         android:text="My Items"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/Eat"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/Exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:layout_marginLeft="29dp"
         android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginBottom="17dp"
         android:text="Exit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/NewDay" />
@@ -110,6 +112,21 @@
         android:layout_marginTop="28dp"
         android:text="0/100"
         android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/Days"
+        app:layout_constraintEnd_toStartOf="@+id/Days"
+        app:layout_constraintStart_toEndOf="@+id/board"
         app:layout_constraintTop_toTopOf="@+id/Days" />
+
+    <TextView
+        android:id="@+id/board"
+        android:layout_width="0dp"
+        android:layout_height="243dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
+        android:text="....."
+        app:layout_constraintEnd_toStartOf="@+id/Hungry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
