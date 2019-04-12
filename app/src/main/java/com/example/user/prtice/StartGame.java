@@ -19,7 +19,7 @@ import android.view.View;
 import java.security.PrivateKey;
 import java.util.Random;
 
-public class StartGame extends AppCompatActivity {
+public class StartGame extends Activity {
 
      private int days;
      private  int thirty = 0;

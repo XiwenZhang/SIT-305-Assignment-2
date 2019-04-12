@@ -44,8 +44,8 @@ public class HuntActivity extends Activity {
 
 
     public void Ok_task(View view) {
-        Intent intent = new Intent(this, StartGame.class);
-        startActivity(intent);
+        this.finish();
+
     }
 
     private void Event(int i) {
