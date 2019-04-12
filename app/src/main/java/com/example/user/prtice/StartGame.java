@@ -1,3 +1,6 @@
+
+
+
 package com.example.user.prtice;
 import android.app.Activity;
 import android.content.Intent;
@@ -18,23 +21,23 @@ import java.util.Random;
 
 public class StartGame extends AppCompatActivity {
 
-    private int days;
-    private  int thirty = 0;
-    private  int hungry = 0;
-    private  int heal = 0;
-    public  int random = 0;
+     private int days;
+     private  int thirty = 0;
+     private  int hungry = 0;
+     private  int heal = 0;
+     public  int random = 0;
 
-    private TextView Days;
-    private TextView Board;
-    private TextView Thirty;
-    private TextView Hungry;
+     private TextView Days;
+     private TextView Board;
+     private TextView Thirty;
+     private TextView Hungry;
 
-    private Button Hunt;
-    private Button Eat;
-    private Button Newdays;
-    private Button Drink;
-    private Button Adventure;
-    private Button MyItem;
+     private Button Hunt;
+     private Button Eat;
+     private Button Newdays;
+     private Button Drink;
+     private Button Adventure;
+     private Button MyItem;
 
 
 
@@ -46,18 +49,18 @@ public class StartGame extends AppCompatActivity {
         setContentView(R.layout.startpage);
 
 
-        Newdays =  findViewById(R.id.NewDay);
-        Hunt = findViewById(R.id.Hunt);
-        Drink = findViewById(R.id.Drink);
-        Eat = findViewById(R.id.Eat);
-        Adventure = findViewById(R.id.Adventure);
-        MyItem = findViewById(R.id.Items);
+         Newdays =  findViewById(R.id.NewDay);
+         Hunt = findViewById(R.id.Hunt);
+         Drink = findViewById(R.id.Drink);
+         Eat = findViewById(R.id.Eat);
+         Adventure = findViewById(R.id.Adventure);
+         MyItem = findViewById(R.id.Items);
 
 
-        Thirty = findViewById(R.id.Thirty);
-        Hungry = findViewById(R.id.Hungry) ;
-        Days = findViewById(R.id.Days);
-        Board = findViewById(R.id.board);
+         Thirty = findViewById(R.id.Thirty);
+         Hungry = findViewById(R.id.Hungry) ;
+         Days = findViewById(R.id.Days);
+         Board = findViewById(R.id.board);
 
 
 
@@ -90,7 +93,7 @@ public class StartGame extends AppCompatActivity {
         Hunt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Hunt();
+            Hunt();
             }
         });
     }
@@ -182,12 +185,12 @@ public class StartGame extends AppCompatActivity {
         Hungry.setText(hungry + "/100");
         String days1 = Integer.toString(days);
         Days.setText(days1);
-    }
+}
 
     private void Hunt()
     {   Random random1 = new Random();
         random  = random1.nextInt(3) + 1;
-        Intent intent = new Intent(StartGame.this,HunterActivity.class);
+        Intent intent = new Intent(StartGame.this,HuntActivity.class);
         intent.putExtra("Random",random);
         startActivity(intent);
     }
