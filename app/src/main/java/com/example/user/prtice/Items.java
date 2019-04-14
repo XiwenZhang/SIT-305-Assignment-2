@@ -6,13 +6,14 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Items extends Activity {
 
     private ListView sell;
     private ListView buy;
-
+    private ArrayList<ItemAdapter> items1;
 
 
 
@@ -32,7 +33,8 @@ public class Items extends Activity {
     protected void onResume() {
         super.onResume();
 
-
+        sell =findViewById(R.id.marketboard);
+        buy = findViewById(R.id.itemsboard);
 
     }
 }
