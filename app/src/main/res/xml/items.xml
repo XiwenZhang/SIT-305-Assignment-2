@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <allitems>
+    <item id = "0">
+        <name>Items</name>
+        <price>$</price>
+    </item>
+
+
+
     <item id = "1">
-    <name>Second-hand computer</name>
+    <name>Used computer</name>
     <price>150</price>
     </item>
 
@@ -11,4 +18,5 @@
     <price>1000</price>
     </item>
 </allitems>
+
 

@@ -3,7 +3,9 @@
 
 package com.example.user.prtice;
 import android.app.Activity;
+import android.content.ClipData;
 import android.content.Intent;
+import android.content.res.XmlResourceParser;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPropertyAnimatorCompat;
@@ -13,10 +15,19 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.view.View;
 
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.security.PrivateKey;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class StartGame extends Activity {
@@ -31,6 +42,7 @@ public class StartGame extends Activity {
      private TextView Board;
      private TextView Thirty;
      private TextView Hungry;
+    private ListView mark;
 
      private Button Hunt;
      private Button Eat;
@@ -39,6 +51,9 @@ public class StartGame extends Activity {
      private Button Market;
      private Button MyItem;
 
+     private List<ItemAdapter> sells;
+     private ItemAdapter itemAdapter;
+     private XmlPullParser parser;
 
 
 
@@ -62,8 +77,18 @@ public class StartGame extends Activity {
          Days = findViewById(R.id.Days);
          Board = findViewById(R.id.board);
 
+         mark = findViewById(R.id.markee);
+
+         sells = null;
+
+         sells = parseXmlUsingPull();
+         MyBaseAdapter a = new MyBaseAdapter(this,sells);
+         mark.setAdapter(a);
 
 
+      /*
+            This is button on click listener
+      */
         Market.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -206,4 +231,69 @@ public class StartGame extends Activity {
         Intent intent = new Intent(StartGame.this,MarketActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * Get in data from items.xml in assets
+      */
+
+            public List<ItemAdapter> parseXmlUsingPull()
+        {
+            List<ItemAdapter> sell = null;
+            ItemAdapter item = null;
+            XmlResourceParser parser = getResources().getXml(R.xml.items);
+
+
+            try{
+                /**
+                 * Start parsing the document event: XmlPullParser.START_DOCUMENT—>0
+                 * End parsing document event: XmlPullParse.END_DOCUMENT _>1
+                 * Start parsing tag event: XmlPullParse.START_TAG —>2
+                 * End parsing tag event: XmlPullParse.END_TAG —>3
+                 * Parsing text event: XmlPullParse.TEXT —>4
+                 */
+                int eventType = parser.getEventType();
+                while (eventType != XmlPullParser.END_DOCUMENT){
+                    String name = parser.getName();
+                    switch (eventType) {
+                        case XmlPullParser.START_TAG:
+                            if ("allitems".equals(name)) {
+                                sell = new ArrayList<>();
+
+                            }else if ("item".equals(name))
+                            {   //get the item and create a new ItemAdapter to save data
+                                //get the ID of single item
+                                item  = new ItemAdapter();
+                                item.setID(Integer.parseInt(parser.getAttributeValue(0)));
+                            }else if ("name".equals(name))
+                            {   //get item name
+                                item.setName(parser.nextText());
+
+                            }else if ("price".equals(name))
+                            {   //get item price
+                                item .setPrice(parser.nextText());
+                            }
+                            break;
+                        case XmlPullParser.END_TAG:
+                            if ("item".equals(name)){
+                                //save those into list<Adapter>
+                                sell.add(item);
+                            }
+                            break;
+
+
+
+                    }
+                    eventType= parser.next();
+
+                }
+
+            } catch (XmlPullParserException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            //return list
+            return sell;
+
+        }
 }

@@ -92,7 +92,8 @@
         android:layout_marginBottom="17dp"
         android:text="Exit"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/NewDay" />
+        app:layout_constraintStart_toStartOf="@+id/NewDay"
+        app:layout_constraintTop_toBottomOf="@+id/markee" />
 
     <TextView
         android:id="@+id/Thirty"
@@ -109,18 +110,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
         android:text="0/100"
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/markee"
         app:layout_constraintTop_toBottomOf="@+id/Days" />
 
     <TextView
         android:id="@+id/board"
         android:layout_width="0dp"
-        android:layout_height="284dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
@@ -159,10 +160,25 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="23dp"
         android:layout_marginRight="23dp"
-        android:textSize="20dp"
         android:text="Weeks:"
+        android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/Days"
         app:layout_constraintStart_toEndOf="@+id/board"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/markee"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:layout_marginBottom="316dp"
+        app:layout_constraintBottom_toTopOf="@+id/Exit"
+        app:layout_constraintEnd_toStartOf="@+id/Hungry"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -36,15 +36,15 @@ public class MarketActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.market);
-
-         marketlist = (ListView) findViewById(R.id.marketboard);
+        getindata();
+         marketlist = (ListView) findViewById(R.id.markboard);
 //        itemlist = findViewById(R.id.itemsboard);
         test = findViewById(R.id.test);
 
 
 
 
-        getindata();
+
 
 
         MyBaseAdapter adapter = new MyBaseAdapter(this,sells);
@@ -197,7 +197,7 @@ public class MarketActivity extends Activity {
                             }else if ("price".equals(parserName))
                             {
                                 String name = parser.nextText();
-                                itemAdapter.setPrice(name);
+                                itemAdapter.setName(name);
                             }
 
                     }
