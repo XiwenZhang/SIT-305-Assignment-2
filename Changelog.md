@@ -19,6 +19,7 @@
 - Next update will before next monday
 
 # Week 7, Monday 15 April
+- Feedback: Good to see some more progress. [Henry]
 - Feedback: Some functions still missing function comments. [Henry]
 - Feedback: I feel your project is falling a bit behind, and you're not putting in enough time to pass. Show me 10-14 hours each per week.. where was it spent? 
 - Feedback: I want you to start writing the time taken per changelog item (in brackets at the end of each line), so that you can see where time is being spent / not being spent enough. [Henry]
