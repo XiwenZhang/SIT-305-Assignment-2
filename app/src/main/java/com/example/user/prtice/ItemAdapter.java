@@ -1,52 +1,56 @@
 package com.example.user.prtice;
 
-import java.security.PublicKey;
-
 public class ItemAdapter {
-    private String mid;
-    private String mname;
-    private String mprice;
+    private int id;
+    private String name;
+    private String price;
 
 //    //Item setting
-//    Items(String id,String name,String price )
-//    {   mid = id;
-//        mname = name;
-//        mprice = price;
-//
-//    }
+
 
     /**
-     *package data
+     * package data
      */
-    public void setID(String id)
-    {
-        mid = id;
-    }
-    public void  setName(String name)
-    {
-        mname = name;
-    }
-    public void setPrice(String price)
-    {
-        mprice = price;
+    public void setID(int id) {
+        this.id = id;
     }
 
-    public String getMid() {
-        return mid;
+    public void setName(String name) {
+        this.name = name;
     }
-    public String getMname(){
-        return mname;
+
+    public void setPrice(String price) {
+        this.price = price;
     }
-    public String getMprice(){
-        return mprice;
+
+    public int getMid() {
+        return id;
+    }
+
+    public String getMname() {
+        return name;
+    }
+
+    public String getMprice() {
+        return price;
     }
 
     /**
      *
      */
-
-
-
-
-
+//  public ItemAdapter(String name,String price)
+//   {
+//    this.name = name;
+//      this.price = price;
+//
+//   }
+//
+//    @Override
+//    public String toString() {
+//      return name + "    " + price;
+//   }
+//
+//
+//
+//}
 }

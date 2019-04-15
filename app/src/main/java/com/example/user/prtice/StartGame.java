@@ -36,7 +36,7 @@ public class StartGame extends Activity {
      private Button Eat;
      private Button Newdays;
      private Button Drink;
-     private Button Adventure;
+     private Button Market;
      private Button MyItem;
 
 
@@ -53,7 +53,7 @@ public class StartGame extends Activity {
          Hunt = findViewById(R.id.Hunt);
          Drink = findViewById(R.id.Drink);
          Eat = findViewById(R.id.Eat);
-         Adventure = findViewById(R.id.Adventure);
+         Market = findViewById(R.id.Adventure);
          MyItem = findViewById(R.id.Items);
 
 
@@ -64,8 +64,14 @@ public class StartGame extends Activity {
 
 
 
+        Market.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Market();
+            }
+        });
 
-        Newdays.setOnClickListener(new View.OnClickListener() {
+        Newdays.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 New_days();
@@ -192,6 +198,12 @@ public class StartGame extends Activity {
         random  = random1.nextInt(3) + 1;
         Intent intent = new Intent(StartGame.this,HuntActivity.class);
         intent.putExtra("Random",random);
+        startActivity(intent);
+    }
+
+    private  void  Market()
+    {
+        Intent intent = new Intent(StartGame.this,MarketActivity.class);
         startActivity(intent);
     }
 }

@@ -12,6 +12,8 @@
 
         <activity android:name=".StartGame">
             </activity>
+        <activity android:name=".Items"></activity>
+        <activity android:name=".MarketActivity"></activity>
         <activity android:name=".ScoreListActivity"
         ></activity>
         <activity android:name="HuntActivity"
