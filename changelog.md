@@ -1,23 +1,27 @@
+#Changelog for SIT-305 Assignment 2
+
+# Week 5, [which day?]
+- perfected my  program plan and did some big changes.
+- Created the basic interface of application
+- Find images and other useful outplay
+- Added 4 javas class with layout 
+- Connect button and javas setting some view interface: water, foods, days, etc...
+- update connection of Git to GitHub
 
 
-# Week 6, Monday 8/April [Henry]
-- There is a need of minimum 2 days per week to pass under normal circumstances. 
-- I need to get serious with you here: To catch up, you'll need to do much more. If you're not intending to pass, look into withdrawing from the unit and trying again next year.
-- Function comments. I made a big fuss about this on the unit site last week.
+# Week 6, [which day?]
+- Adding new java HunterActivity and layout.
+- Adding formulas and vlues
+- Making source code unified format, cleaner and sampler.
+- Adding game random events in HunterActivity.
+- Update building files 
+- (I will do more works next week and Thx Sir :)  )
+- Next update will before next monday
+
+# Week 7, Monday 15 April
+- Feedback: Good to see some more progress. [Henry]
+- Feedback: Some functions still missing function comments. [Henry]
+- Feedback: I feel your project is falling a bit behind, and you're not putting in enough time to pass. Show me 10-14 hours each per week.. where was it spent? 
+- Feedback: I want you to start writing the time taken per changelog item (in brackets at the end of each line), so that you can see where time is being spent / not being spent enough. [Henry]
 
 
-
-#Week 5, Friday 5/April
-1. perfect my plan
-2. design the basic Ui interface and find some images it will be use future.
-3. Adding nearly 4 Java page and some basic game data: Days, Foods, Watter etc...
-5. upload them to GitHub.
-
-#Week 6, Friday 12/April
-1. Created a new page "HunterActivity".
-2. Do some events for Hunter action.
-3. random events make user can enjoy different events for each times.
-4. Clearn and sample before sources codes make them looked cleaner and shorter.
-( I will update the new codes before next monday, and I will add speed for it)
-
-                                                                  By the way thx sir :)
