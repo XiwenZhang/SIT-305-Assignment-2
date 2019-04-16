@@ -9,76 +9,47 @@
     <TextView
         android:id="@+id/Days"
 
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginRight="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:text="0"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/display1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/NewDay"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="13dp"
-        android:text="Newdays"
-        app:layout_constraintBottom_toTopOf="@+id/Exit"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="61dp"
+        android:text="New Week"
+        app:layout_constraintBottom_toBottomOf="@+id/Exit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Items" />
 
     <Button
         android:id="@+id/Hunt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginLeft="33dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:text="Hang out"
-        app:layout_constraintBaseline_toBaselineOf="@+id/Drink"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/Drink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginBottom="4dp"
-        android:text="Drink"
-        app:layout_constraintBottom_toTopOf="@+id/Items"
-        app:layout_constraintEnd_toStartOf="@+id/Items" />
-
-    <Button
-        android:id="@+id/Adventure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginLeft="33dp"
-        android:text="Market"
-        app:layout_constraintBaseline_toBaselineOf="@+id/Eat"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/Eat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:onClick="Eat_Some"
-        android:text="Eat Some "
-        app:layout_constraintEnd_toStartOf="@+id/Items"
-        app:layout_constraintTop_toBottomOf="@+id/Items" />
+        app:layout_constraintBottom_toBottomOf="@+id/Items"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Items" />
 
     <Button
         android:id="@+id/Items"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="29dp"
-        android:layout_marginRight="29dp"
-        android:layout_marginBottom="216dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginBottom="193dp"
         android:text="My Items"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -92,78 +63,63 @@
         android:layout_marginBottom="17dp"
         android:text="Exit"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/NewDay"
-        app:layout_constraintTop_toBottomOf="@+id/markee" />
+        app:layout_constraintStart_toStartOf="@+id/NewDay" />
 
     <TextView
-        android:id="@+id/Thirty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:text="0/100"
-        android:textSize="12dp"
-        app:layout_constraintStart_toStartOf="@+id/Hungry"
-        app:layout_constraintTop_toBottomOf="@+id/Hungry" />
-
-    <TextView
-        android:id="@+id/Hungry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:text="0/100"
-        android:textSize="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/markee"
-        app:layout_constraintTop_toBottomOf="@+id/Days" />
-
-    <TextView
-        android:id="@+id/board"
+        android:id="@+id/money"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="313dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="313dp"
+        android:text="0"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/display2"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginRight="37dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="8dp"
         android:text="....."
-        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/markee"
+        app:layout_constraintEnd_toStartOf="@+id/display1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/Days" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/display2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
-        android:text="water:"
-        app:layout_constraintEnd_toStartOf="@+id/Hungry"
-        app:layout_constraintStart_toEndOf="@+id/board"
-        app:layout_constraintTop_toTopOf="@+id/Hungry" />
+        android:layout_marginStart="300dp"
+        android:layout_marginLeft="300dp"
+        android:text="Money:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/money"
+        app:layout_constraintEnd_toStartOf="@+id/money"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="food:"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/display1"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginRight="23dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="18dp"
         android:text="Weeks:"
         android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
         app:layout_constraintEnd_toStartOf="@+id/Days"
-        app:layout_constraintStart_toEndOf="@+id/board"
+        app:layout_constraintStart_toEndOf="@+id/title"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
@@ -173,12 +129,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="72dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
         android:layout_marginBottom="316dp"
         app:layout_constraintBottom_toTopOf="@+id/Exit"
-        app:layout_constraintEnd_toStartOf="@+id/Hungry"
+        app:layout_constraintEnd_toStartOf="@+id/display2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
 
 </android.support.constraint.ConstraintLayout>

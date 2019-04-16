@@ -1,6 +1,7 @@
 package com.example.user.prtice;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,17 +54,16 @@ public class MyBaseAdapter  extends BaseAdapter {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.singleitem,null);
             viewHolder.tv1 = (TextView) convertView.findViewById(R.id.w001);
             viewHolder.tv2 = (TextView) convertView.findViewById(R.id.w002);
-            convertView.setTag(viewHolder);
+
 
 
         }else
-        {
+        {   //set view_holder  and get Tag
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        viewHolder. tv1.setText(mList.get(position).getMname()+"");
+        viewHolder.tv1.setText(mList.get(position).getMname()+"");
         viewHolder.tv2.setText(mList.get(position).getMprice()+"");
-
         return convertView;
 
     }
@@ -71,6 +71,7 @@ public class MyBaseAdapter  extends BaseAdapter {
 
     public final class ViewHolder{
         TextView tv1,tv2;
+
 
     }
 }

@@ -6,19 +6,20 @@
 
     <TextView
         android:id="@+id/w001"
-        android:layout_width="204dp"
+        android:layout_width="167dp"
         android:layout_height="30dp"
         android:layout_gravity="left"
-        android:autoSizeMaxTextSize="5dp"
         android:singleLine="true"
-        android:textSize="10pt" />
+        android:textSize="10dp"
+
+        />
 
     <TextView
         android:id="@+id/w002"
-        android:layout_width="50dp"
+        android:layout_width="78dp"
         android:layout_height="30dp"
         android:gravity="right"
-        android:textSize="10pt" />
+        android:textSize="15dp" />
 
 
 </LinearLayout>
