@@ -1,7 +1,6 @@
 package com.example.user.prtice;
 
 import android.content.Context;
-import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +24,7 @@ public class MyBaseAdapter  extends BaseAdapter {
     @Override
     public int getCount() {
         return mList.size();
-}
+    }
 
     @Override
     public Object getItem(int position) {
@@ -52,26 +51,26 @@ public class MyBaseAdapter  extends BaseAdapter {
         if (convertView == null){
             viewHolder = new ViewHolder();
             convertView = LayoutInflater.from(mContext).inflate(R.layout.singleitem,null);
-            viewHolder.tv1 = (TextView) convertView.findViewById(R.id.w001);
-            viewHolder.tv2 = (TextView) convertView.findViewById(R.id.w002);
-
+            viewHolder.show1 = (TextView) convertView.findViewById(R.id.w001);
+            viewHolder.show2 = (TextView) convertView.findViewById(R.id.w002);
+            convertView.setTag(viewHolder);
 
 
         }else
-        {   //set view_holder  and get Tag
+        {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        viewHolder.tv1.setText(mList.get(position).getMname()+"");
-        viewHolder.tv2.setText(mList.get(position).getMprice()+"");
+        viewHolder.show1.setText(mList.get(position).getMname()+"");
+        viewHolder.show2.setText(mList.get(position).getMprice()+"");
+
         return convertView;
 
     }
 
 
     public final class ViewHolder{
-        TextView tv1,tv2;
-
+        TextView show1,show2;
 
     }
 }

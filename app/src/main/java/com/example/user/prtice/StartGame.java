@@ -37,11 +37,14 @@ import java.util.Random;
 public class StartGame extends Activity {
 
     private int days;
-    private double moneyc = 3000;
+    private int moneyc = 3000;
     private int hungry = 0;
     private int heal = 0;
     public int random = 0;
     private int event = 1;
+    private int event2 = 0;
+
+
     private String msg;
     private String title;
     private int changes;
@@ -55,16 +58,22 @@ public class StartGame extends Activity {
     private TextView Days;
     private TextView Board;
     private TextView Money;
-    private TextView Hungry;
+    private TextView Health;
+    private TextView Heal;
+
+
+
+
     private ListView mark;
 
 
     private Button Hangout;
     private Button Eat;
     private Button Newdays;
-    private Button Drink;
+    private Button money;
     private Button Market;
     private Button MyItem;
+
 
     private List<ItemAdapter> sells;
     private ItemAdapter itemAdapter;
@@ -78,7 +87,10 @@ public class StartGame extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.startpage);
 
-
+        //set value
+        moneyc = 3000;
+        heal = 100;
+        days = 1;
 
         //Button
         Newdays = findViewById(R.id.NewDay);
@@ -91,6 +103,10 @@ public class StartGame extends Activity {
         Money = findViewById(R.id.money);
         Display1 = findViewById(R.id.display1);
         Display2 = findViewById(R.id.display2);
+        Health = findViewById(R.id.health);
+        Heal = findViewById(R.id.heal);
+
+
 
         //ListView
         mark = findViewById(R.id.markee);
@@ -107,16 +123,17 @@ public class StartGame extends Activity {
         mark.setAdapter(a);
 
 
-        // random events count
-        Hangoutevent();
 
-        // this is set font of view
+
+         //this is set font of view
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/ftt.otf");
-
-
         Days.setTypeface(font);
         Display1.setTypeface(font);
         Display2.setTypeface(font);
+        Heal.setTypeface(font);
+        Health.setTypeface(font);
+        Money.setTypeface(font);
+
 
 
       /*
@@ -137,6 +154,9 @@ public class StartGame extends Activity {
         Hangout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // random events count
+                Hangoutevent();
+                    //show dailog window
                 dailaogoutplay();
 
 
@@ -149,19 +169,7 @@ public class StartGame extends Activity {
 
 
 
-    /**
-     * Eat button on click + 20 value
-     */
 
-    private void Eat_Some() {
-        hungry += 20;
-        if (hungry >= 100) {
-            hungry = 100;
-        }
-
-        Hungry.setText(hungry + "/100");
-
-    }
 
 
 
@@ -171,18 +179,12 @@ public class StartGame extends Activity {
      */
     private void New_days() {
 
+        days += 1;
         String days1 = Integer.toString(days);
         Days.setText(days1);
     }
 
-    /**
-     * intent page
-     */
 
-    private void Market() {
-//        Intent intent = new Intent(StartGame.this, MarketActivity.class);
-//        startActivity(intent);
-    }
 
     /**
      * Get in data from items.xml in assets
@@ -254,16 +256,41 @@ public class StartGame extends Activity {
                  switch (event)
                  {
                      case 1:
-                         moneyc = Math.ceil(moneyc * 0.9);
+
+                         double a;
+                         a = moneyc;
+                         a = Math.ceil(a * 0.9);
+                         moneyc = (int) a;
+                         Money.setText(Integer.toString(moneyc));
+                         break;
+                     case 2:
+                         moneyc = moneyc - 100;
+                         Money.setText(Integer.toString(moneyc));
+                         break;
                  }
             }
         });
-        builder.setPositiveButton(btn2, new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(btn2, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                switch (event)
+                {
+                    case 1:
+                        double a;
+                        a = moneyc;
+                        a = Math.ceil(a * 0.9);
+                        moneyc = (int) a;
+                        Money.setText(Integer.toString(moneyc));
+                        break;
+                    case 2:
+                        break;
 
+                }
             }
         });
+
+
+
 
         builder.show();
     }
@@ -274,7 +301,17 @@ public class StartGame extends Activity {
     public void Hangoutevent()
     {
         Random random1 = new Random();
-        event = random1.nextInt(2) + 1;
+
+
+        event2 = random1.nextInt(100);
+        //setting percentage of event
+        if (0<= event2 && event2<= 20 )
+        {
+            event = 1;
+        }else
+        {
+            event = 2;
+        }
 
 
         switch (event){
@@ -286,7 +323,7 @@ public class StartGame extends Activity {
             case 2:
                 msg ="You are walking down the street and being attracted by lottery advertisements." +
                         "\n You decide to buy one";
-                btn1 = "buy it(10$)";
+                btn1 = "buy it(100$)";
                 btn2 = "This is scam";
 
 

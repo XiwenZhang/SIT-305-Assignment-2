@@ -17,6 +17,25 @@
     <name>Iphone</name>
     <price>1000</price>
     </item>
+
+    <item id = "2">
+        <name>Iphone</name>
+        <price>1000</price>
+    </item>
+
+    <item id = "2">
+        <name>Iphone</name>
+        <price>1000</price>
+    </item>
+
+    <item id = "2">
+        <name>Iphone</name>
+        <price>1000</price>
+    </item>
+    <item id = "2">
+        <name>Iphone</name>
+        <price>1000</price>
+    </item>
 </allitems>
 
 

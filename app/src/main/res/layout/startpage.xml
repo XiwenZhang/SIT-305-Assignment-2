@@ -30,7 +30,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/Exit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Items" />
+        app:layout_constraintTop_toBottomOf="@+id/Hunt" />
 
     <Button
         android:id="@+id/Hunt"
@@ -47,8 +47,8 @@
         android:id="@+id/Items"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:layout_marginBottom="193dp"
         android:text="My Items"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,16 +69,14 @@
         android:id="@+id/money"
         android:layout_width="0dp"
         android:layout_height="24dp"
-        android:layout_marginTop="313dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginRight="9dp"
-        android:layout_marginBottom="313dp"
-        android:text="0"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/Exit"
+        android:layout_marginEnd="306dp"
+        android:layout_marginRight="306dp"
+        android:layout_marginBottom="89dp"
+        android:text="3000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/Hunt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/display2"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintStart_toEndOf="@+id/display2" />
 
     <TextView
         android:id="@+id/title"
@@ -100,9 +98,12 @@
         android:id="@+id/display2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
-        android:layout_marginLeft="300dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
         android:text="Money:"
+        android:textSize="20dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/money"
         app:layout_constraintEnd_toStartOf="@+id/money"
         app:layout_constraintStart_toStartOf="parent" />
@@ -124,18 +125,43 @@
 
     <ListView
         android:id="@+id/markee"
-        android:layout_width="0dp"
+        android:layout_width="207dp"
         android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="51dp"
+        app:layout_constraintBottom_toBottomOf="@+id/money"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Days" />
+
+    <TextView
+        android:id="@+id/health"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="316dp"
-        app:layout_constraintBottom_toTopOf="@+id/Exit"
-        app:layout_constraintEnd_toStartOf="@+id/display2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Health:"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/heal"
+        app:layout_constraintEnd_toStartOf="@+id/heal"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/heal"
+        android:layout_width="0dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="307dp"
+        android:layout_marginRight="307dp"
+        android:layout_marginBottom="59dp"
+        android:text="100"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/Hunt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/health"
+        app:layout_constraintTop_toBottomOf="@+id/markee" />
 
 </android.support.constraint.ConstraintLayout>
