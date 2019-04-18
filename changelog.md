@@ -25,3 +25,18 @@
 - Feedback: I want you to start writing the time taken per changelog item (in brackets at the end of each line), so that you can see where time is being spent / not being spent enough. [Henry]
 
 
+#Week 7(18/4/2019)
+- Adding the xml parser for achieve items information and the file in with font.(4 Hrs)
+- Adding fonts for TextView and Button (2 Hrs)
+- Adding ListView shopping system(When you touch the market ListView can buy items)(5 Hrs)
+- Adding MyItems ListView(When users after buy will shows in MyItems)  (5 Hrs)
+- Adding some Toast for the information in MarketListView and Click tigger (4 Hrs)
+- Adding lottery ticket events in "hang out" (2 Hrs)
+(Font and Items.xml(Data reader from items) : SIT-305-Assignment-2/app/src/main/assets)
+- Optimization gamplay. (4 Hrs)
+	-In this game, users' target is to buy a own car in 50 Weeks.
+	-Users make money by buying items from markets and the price of them will floating up and down per week.
+	-Per week will received a gossip and it shows about items price flot.
+	-Users use the difference of items price to make money and to buy a car.
+	
+- Next week( mid- break) will adding the back ground, finish the selling system  and other items. The game will finlish befor week 9.

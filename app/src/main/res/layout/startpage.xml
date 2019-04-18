@@ -11,10 +11,9 @@
 
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="0"
+        android:text="1/60"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/display1"
@@ -24,13 +23,12 @@
         android:id="@+id/NewDay"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginBottom="61dp"
+        android:layout_marginBottom="24dp"
         android:text="New Week"
-        app:layout_constraintBottom_toBottomOf="@+id/Exit"
+        app:layout_constraintBottom_toTopOf="@+id/Exit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Hunt" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/Hunt"
@@ -38,21 +36,21 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="46dp"
         android:text="Hang out"
-        app:layout_constraintBottom_toBottomOf="@+id/Items"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Items" />
+        app:layout_constraintTop_toBottomOf="@+id/display2" />
 
     <Button
         android:id="@+id/Items"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="193dp"
-        android:text="My Items"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:text="Hospital"
+        app:layout_constraintBottom_toBottomOf="@+id/Hunt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Hunt" />
 
     <Button
         android:id="@+id/Exit"
@@ -68,72 +66,59 @@
     <TextView
         android:id="@+id/money"
         android:layout_width="0dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="306dp"
-        android:layout_marginRight="306dp"
-        android:layout_marginBottom="89dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginRight="300dp"
         android:text="3000"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/Hunt"
+        app:layout_constraintBottom_toTopOf="@+id/heal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/display2" />
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="8dp"
-        android:text="....."
-        app:layout_constraintBottom_toTopOf="@+id/markee"
-        app:layout_constraintEnd_toStartOf="@+id/display1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Days" />
+        app:layout_constraintStart_toEndOf="@+id/display2"
+        app:layout_constraintTop_toTopOf="@+id/display2" />
 
     <TextView
         android:id="@+id/display2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginRight="9dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
         android:text="Money:"
         android:textSize="20dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/money"
         app:layout_constraintEnd_toStartOf="@+id/money"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/markee" />
 
     <TextView
         android:id="@+id/display1"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="18dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginLeft="184dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="13dp"
         android:text="Weeks:"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toBottomOf="@+id/Days"
         app:layout_constraintEnd_toStartOf="@+id/Days"
-        app:layout_constraintStart_toEndOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/markee"
-        android:layout_width="207dp"
-        android:layout_height="0dp"
+        android:layout_width="184dp"
+        android:layout_height="290dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginBottom="51dp"
-        app:layout_constraintBottom_toBottomOf="@+id/money"
+        android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Days" />
+        app:layout_constraintTop_toBottomOf="@+id/display1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/health"
@@ -141,27 +126,58 @@
         android:layout_height="28dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="18dp"
         android:text="Health:"
         android:textSize="20dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/heal"
+        app:layout_constraintBottom_toTopOf="@+id/Hunt"
         app:layout_constraintEnd_toStartOf="@+id/heal"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/money" />
 
     <TextView
         android:id="@+id/heal"
         android:layout_width="0dp"
         android:layout_height="23dp"
-        android:layout_marginTop="58dp"
-        android:layout_marginEnd="307dp"
-        android:layout_marginRight="307dp"
-        android:layout_marginBottom="59dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="299dp"
+        android:layout_marginRight="299dp"
+        android:layout_marginBottom="23dp"
         android:text="100"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/Hunt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/health"
-        app:layout_constraintTop_toBottomOf="@+id/markee" />
+        app:layout_constraintTop_toTopOf="@+id/display2" />
+
+    <ListView
+        android:id="@+id/myitems"
+        android:layout_width="190dp"
+        android:layout_height="247dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toEndOf="@+id/markee"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/display3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="8dp"
+        android:text="MyItems"
+        app:layout_constraintBottom_toTopOf="@+id/myitems"
+        app:layout_constraintEnd_toEndOf="@+id/Items"
+        app:layout_constraintStart_toEndOf="@+id/markee"
+        app:layout_constraintTop_toBottomOf="@+id/Days" />
 
 </android.support.constraint.ConstraintLayout>
