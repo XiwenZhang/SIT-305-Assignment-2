@@ -9,7 +9,7 @@
 
     <item id = "1">
     <name>Used computer</name>
-    <price>150</price>
+    <price>550</price>
     </item>
 
 
@@ -18,24 +18,16 @@
     <price>1000</price>
     </item>
 
-    <item id = "2">
-        <name>Iphone</name>
-        <price>1000</price>
+    <item id = "3">
+        <name>1kg Gold brick</name>
+        <price>4000</price>
+    </item>
+    <item id = "4">
+        <name>Car model</name>
+        <price>80</price>
     </item>
 
-    <item id = "2">
-        <name>Iphone</name>
-        <price>1000</price>
-    </item>
 
-    <item id = "2">
-        <name>Iphone</name>
-        <price>1000</price>
-    </item>
-    <item id = "2">
-        <name>Iphone</name>
-        <price>1000</price>
-    </item>
 </allitems>
 
 

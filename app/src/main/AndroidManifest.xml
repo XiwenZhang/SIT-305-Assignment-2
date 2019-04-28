@@ -10,13 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".StartGame">
+        <activity android:name=".StartGame" android:launchMode="standard" >
+
             </activity>
 
         <activity android:name=".ScoreListActivity"
         ></activity>
         <activity android:name=".HelpActivity"
             ></activity>
+        <activity android:name=".CarSells" android:launchMode="standard"
+            ></activity>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    tools:layout_editor_absoluteY="25dp"><![CDATA[
+    tools:layout_editor_absoluteY="25dp"
+    android:background="@drawable/background"
     >
 
-    ]]>
 
 
     <Button
@@ -36,7 +36,6 @@
         android:layout_height="50dp"
         android:layout_marginBottom="24dp"
         android:text="Score List"
-        android:onClick="ScoreList"
         app:layout_constraintBottom_toTopOf="@+id/Exit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

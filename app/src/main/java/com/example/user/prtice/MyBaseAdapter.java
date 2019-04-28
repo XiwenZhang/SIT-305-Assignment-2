@@ -1,6 +1,7 @@
 package com.example.user.prtice;
 
 import android.content.Context;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,8 +62,16 @@ public class MyBaseAdapter  extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        viewHolder.show1.setText(mList.get(position).getMname()+"");
+
+        viewHolder.show1.setText(" "+ mList.get(position).getMname()+"");
         viewHolder.show2.setText(mList.get(position).getMprice()+"");
+        if (position == 0)
+        {
+            viewHolder.show1.setTextSize(TypedValue.COMPLEX_UNIT_DIP,22);
+            viewHolder.show2.setTextSize(TypedValue.COMPLEX_UNIT_DIP,22);
+
+        }
+
 
         return convertView;
 

@@ -1,15 +1,16 @@
 package com.example.user.prtice;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private Button start;
-    private Button scorelist;
+    private Button SS;
     private Button exit;
 
 
@@ -22,9 +23,16 @@ public class MainActivity extends AppCompatActivity {
 
         //Button Connection
          start = (Button) findViewById(R.id.Start);
-         scorelist = (Button) findViewById(R.id.Scorelist);
+         SS = (Button) findViewById(R.id.Scorelist);
          exit = (Button) findViewById(R.id.Exit);
 
+         SS.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent intent = new Intent(MainActivity.this,ScoreListActivity.class);
+                 startActivity(intent);
+             }
+         });
     }
 
 

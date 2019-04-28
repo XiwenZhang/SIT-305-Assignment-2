@@ -54,7 +54,7 @@ public class MyScondBaseAdapter extends BaseAdapter {
             v = (ViewHolder) convertView.getTag();
         }
 
-            v.s1.setText(mmyItemAdapters.get(position).getName());
+            v.s1.setText(" "+ mmyItemAdapters.get(position).getName());
             v.s2.setText(Integer.toString(mmyItemAdapters.get(position).getCount()));
             v.s3.setText(Integer.toString(mmyItemAdapters.get(position).getPrice()));
 

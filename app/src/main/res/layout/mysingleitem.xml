@@ -10,7 +10,9 @@
         android:layout_height="30dp"
         android:layout_gravity="left"
         android:singleLine="true"
-        android:textSize="10dp" />
+        android:textSize="10dp"
+        android:textColor="#FFFFE0"
+        />
 
     <TextView
         android:id="@+id/w02"
@@ -18,7 +20,9 @@
         android:layout_height="30dp"
         android:gravity="right"
         android:singleLine="true"
-        android:textSize="10dp" />
+        android:textSize="10dp"
+        android:textColor="#FFFFE0"
+        />
 
     <TextView
         android:id="@+id/w03"
@@ -26,7 +30,9 @@
         android:layout_height="30dp"
         android:gravity="right"
         android:singleLine="true"
-        android:textSize="12dp" />
+        android:textSize="12dp"
+        android:textColor="#FFFFE0"
+        />
 
 
 </LinearLayout>
