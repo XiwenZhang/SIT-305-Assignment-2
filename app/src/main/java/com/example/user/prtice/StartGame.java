@@ -38,6 +38,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -129,7 +130,7 @@ public class StartGame extends Activity {
 
 
         //set value
-        moneyc = 3000000;
+        moneyc = 3000;
         heal = 100;
         days = 1;
 
@@ -184,6 +185,14 @@ public class StartGame extends Activity {
         Money.setTypeface(font);
         Display3.setTypeface(font);
         Cars.setTypeface(font);
+
+        /**
+         * setting the save file doc
+         */
+
+
+
+
 
 
 
@@ -336,7 +345,7 @@ public class StartGame extends Activity {
             builder.setView(editText); //set editText
 
             // inner final
-            final int finalCount = count2;
+
 
 
             final int finalId = id2;
@@ -345,7 +354,8 @@ public class StartGame extends Activity {
                 public void onClick(DialogInterface dialog, int which) {
 
                     int finalPrice = 0;
-
+                    //get user in put number
+                    int finalCount =Integer.parseInt(editText.getText().toString()); ;
                     //final count = sells number by user input
                      if (finalCount == a) {
                          //remove the item of ListView
@@ -386,6 +396,22 @@ public class StartGame extends Activity {
 
                          MyScondBaseAdapter scondBaseAdapter = new MyScondBaseAdapter(StartGame.this, myitems);
                          items.setAdapter(scondBaseAdapter);
+
+
+                         //update the money
+                         //price = market price
+                         //market price find by id
+                         for(int i = 0; i<=sells.size();i++)
+                         {
+                             String sname = sells.get(i).getMname();
+
+                             //find the equal name of position item's name
+                             if (sname == name2)
+                             {
+                                 finalPrice = Integer.parseInt(sells.get(i).getMprice());
+                                 break;
+                             }
+                         }
 
                          //update the money
                          moneyc = moneyc + finalPrice * finalCount;
@@ -731,7 +757,7 @@ public class StartGame extends Activity {
                                     {
                                         double changeprice;
 
-                                        //change price is = original price * 2
+                                        //change price is = original price / 2
                                         changeprice = Integer.parseInt(randomList.get(i).getMprice()) / 3;
                                         int changeprice2 = (int) Math.ceil(changeprice);
 
@@ -761,7 +787,7 @@ public class StartGame extends Activity {
 
                         final AlertDialog.Builder builder5 = new AlertDialog.Builder(StartGame.this);
                         builder5.setTitle("News!!!!");
-                        builder5.setMessage("Apple was sued by a number of companies and exposed scandals. Iphone began to cut prices..");
+                        builder5.setMessage("HP releases new computer, this computer is cheaper and full-featured, people start sell their old computer. Used computer start reduction");
                         builder5.setPositiveButton("Fine", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -1109,7 +1135,10 @@ public class StartGame extends Activity {
      * game over
      */
     public void GameOver(){
+        // total money void add in
+        totleMoney();
 
+        //AlerDialogs for game over
         final EditText editText = new EditText(StartGame.this);
         AlertDialog.Builder builder = new AlertDialog.Builder(StartGame.this);
         builder.setTitle("Game Over" );
@@ -1119,8 +1148,12 @@ public class StartGame extends Activity {
         builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                //get user name
                 name = editText.getText().toString();
+
+                //save scores
                 saveScore();
+                //finish the class
                 StartGame.this.finish();
 
             }
@@ -1128,6 +1161,8 @@ public class StartGame extends Activity {
         builder.setNegativeButton("Do not need", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+
+                //finish class
                     StartGame.this.finish();
             }
         });
@@ -1179,7 +1214,7 @@ public class StartGame extends Activity {
     private void saveScore()
     {
 
-        String data = "Name: "+name + "      Assets: $"+ total_money;
+        String data = "Name: "+name + "                   Assets: $"+ total_money;
 
         FileOutputStream out = null;
         BufferedWriter writer = null;
@@ -1192,6 +1227,7 @@ public class StartGame extends Activity {
                 //writing data to file
                 writer.write("\n" +data);
 
+
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -1202,5 +1238,41 @@ public class StartGame extends Activity {
             }
         }
     }
+
+
+    /**
+     * setting the total money
+     */
+
+    private void totleMoney()
+    {
+        total_money = 0;
+        //add the have not sell items
+        for(int i = 0 ; i < myitems.size(); i ++)
+        {
+            int price = myitems.get(i).getPrice() * myitems.get(i).getCount();
+            total_money = total_money + price;
+        }
+        //add the money of user
+        total_money = total_money + moneyc;
+
+        //add cars
+        if (car1 == 1)
+        {
+            total_money = total_money + 50000;
+        }
+
+        if (car2 == 1)
+        {
+            total_money =total_money + 200000;
+        }
+        if(car3 == 1)
+        {
+            total_money = total_money + 600000;
+        }
+
+    }
+
+
 
 }

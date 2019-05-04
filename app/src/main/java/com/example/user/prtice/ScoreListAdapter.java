@@ -2,6 +2,7 @@ package com.example.user.prtice;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,6 +57,7 @@ public class ScoreListAdapter extends BaseAdapter {
         {
             b = (ScoreListAdapter.ViewHolder) convertView.getTag();
         }
+        b.soer1.setTextSize(TypedValue.COMPLEX_UNIT_DIP,18);
 
         b.soer1.setText("" + msocre.get(position));
 

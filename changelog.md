@@ -25,7 +25,7 @@
 - Feedback: I want you to start writing the time taken per changelog item (in brackets at the end of each line), so that you can see where time is being spent / not being spent enough. [Henry]
 
 
-#Week 7(18/4/2019)
+# Week 7(18/4/2019)
 - Adding the xml parser for achieve items information and the file in with font.(4 Hrs)
 - Adding fonts for TextView and Button (2 Hrs)
 - Adding ListView shopping system(When you touch the market ListView can buy items)(5 Hrs)
@@ -43,7 +43,7 @@
 	
 - Next week( mid- break) will adding the back ground, finish the selling system  and other items. The game will finish before week 9.
 
-#Week 7 27/4/2019
+# Week 7 27/4/2019
 - Adding CarSell action, player can buy cars by CarDealer Btn.Its has done  Data exchange, Activity connection and CarSellsActivity is Sub Activity for StarGameActivity.(4 Hrs)
 - Fixing UI design.(3Hrs)
 - Adding the NewWeek Price event including (Gold Price rise and down, IPhone Price rise and down)(4 Hrs)
@@ -52,3 +52,9 @@
 - Adding GameOver, after 60 weeks game time or Exit Button. User can choose save or not save game data. The data will save in inner phone storage (Path : data/data/com.example.uer.prtice/Score)(5 Hrs)
 - Adding  File Reader in ScoreListActivity will get saved data from StarGame path as above GameOver.(2 Hrs)
 - Game Features most done and I will add some other extra features next week and do some UI jobs
+
+# Week 8, [5/5/2019]
+- Adding helpActivity (5 Hrs)
+- Debugs (4 Hrs)
+- Test (3 Hrs)
+- Adding some title and icon (3 Hrs)

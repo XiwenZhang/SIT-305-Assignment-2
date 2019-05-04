@@ -10,7 +10,10 @@
         android:layout_gravity="left"
         android:singleLine="true"
         android:textColor="#FFFFE0"
-        android:textSize="12dp" />
+        android:textSize="12dp"
+        android:gravity="center"
+
+        />
 
 
 </LinearLayout>

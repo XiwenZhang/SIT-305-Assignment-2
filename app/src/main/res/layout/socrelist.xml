@@ -7,12 +7,45 @@
     android:background="@drawable/background2">
 
     <ListView
+        android:id="@+id/socrelist"
         android:layout_width="0dp"
-        android:layout_height="403dp"
-        android:layout_marginTop="114dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="153dp"
+        android:layout_marginBottom="102dp"
+        android:background="@drawable/board"
+        android:divider="#FFFFE0"
+        android:dividerHeight="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/listback"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/socrelist"
-        />
+        app:layout_constraintVertical_bias="0.178" />
+
+    <Button
+        android:id="@+id/de"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="109dp"
+        android:background="@drawable/my_style"
+        android:text="Clear"
+        android:textColor="#d1d1cc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/socrelist" />
+
+    <Button
+        android:id="@+id/listback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/my_style"
+        android:text="Back"
+        android:textColor="#d1d1cc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/de"
+        app:layout_constraintTop_toBottomOf="@+id/socrelist" />
 </android.support.constraint.ConstraintLayout>
