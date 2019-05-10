@@ -52,3 +52,18 @@
 - Adding GameOver, after 60 weeks game time or Exit Button. User can choose save or not save game data. The data will save in inner phone storage (Path : data/data/com.example.uer.prtice/Score)(5 Hrs)
 - Adding  File Reader in ScoreListActivity will get saved data from StarGame path as above GameOver.(2 Hrs)
 - Game Features most done and I will add some other extra features next week and do some UI jobs
+
+# Week 8, [5/5/2019]
+- Adding helpActivity (5 Hrs)
+- Debugs (4 Hrs)
+- Test (3 Hrs)
+- Adding some title and icon (3 Hrs)
+
+# Week 9, Wednesday 8/May [Henry]
+- Good progress. Glad to see it's getting closer. Final stretch now. 
+- Not sure why this file is named oddly? Change it back as soon as you can.
+- Make sure you go over everything in the Grading Criteria super carefully, to ensure you meet each point.
+
+
+
+
