@@ -58,3 +58,8 @@
 - Debugs (4 Hrs)
 - Test (3 Hrs)
 - Adding some title and icon (3 Hrs)
+
+# Week 9, Wednesday 8/May [Henry]
+- Good progress. Glad to see it's getting closer. Final stretch now. 
+- Not sure why this file is named oddly? Change it back as soon as you can.
+- Make sure you go over everything in the Grading Criteria super carefully, to ensure you meet each point.
