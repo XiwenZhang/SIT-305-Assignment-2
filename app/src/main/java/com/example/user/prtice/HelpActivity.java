@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class HelpActivity extends AppCompatActivity {
+public class HelpActivity extends Activity {
 
     private TextView help;
     private Button next;

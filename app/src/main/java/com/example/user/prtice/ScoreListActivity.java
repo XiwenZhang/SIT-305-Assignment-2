@@ -22,7 +22,7 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ScoreListActivity extends AppCompatActivity {
+public class ScoreListActivity extends Activity {
 
 
     private ListView listView;

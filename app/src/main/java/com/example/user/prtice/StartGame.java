@@ -288,6 +288,14 @@ public class StartGame extends Activity {
                             }
                         }
                     });
+                    //set cancel button
+                    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    });
+
                     builder.setCancelable(false); // setting cannot cancel alertdialog by click blank area
 
                     builder.show();
@@ -443,6 +451,13 @@ public class StartGame extends Activity {
 
                 }
             });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+
             builder.setCancelable(false); // setting cannot cancel alertdialog by click blank area
 
 
@@ -961,7 +976,7 @@ public class StartGame extends Activity {
 
                          double a;
                          a = moneyc;
-                         a = Math.ceil(a * 0.9);
+                         a = Math.ceil(a * 0.9); //money * 0.9 and Integer it
                          moneyc = (int) a;
                          Money.setText(Integer.toString(moneyc));
                          break;
@@ -972,9 +987,19 @@ public class StartGame extends Activity {
                              int lottery = 0;
                              //setting lottery system
                              Random random = new Random();
-                             lottery = random.nextInt(99) + 1;
+                             lottery = random.nextInt(99) + 1; // pick a integer from 1 - 100
 
-                             if (lottery < 100 && lottery >= 60) {
+
+                             // if money not enough to buy lottery
+                             if (moneyc <= 100)
+                             {  //set toast
+                                 Toast.makeText(StartGame.this, "You do not have enough money", Toast.LENGTH_LONG).show();
+
+                             }
+
+                             // lottery winning system
+                             if (lottery < 100 && lottery >= 70) {
+                                 // if number between 70 - 99 lottery is winning
                                  AlertDialog.Builder builder2 = new AlertDialog.Builder(StartGame.this);
                                  builder2.setTitle("Lottery");
                                  builder2.setMessage("Congratulations on winning($5000)");
@@ -989,13 +1014,15 @@ public class StartGame extends Activity {
 
                                  builder2.show();
                              }
-                         }else if (moneyc <= 100)
-                         {
-                             Toast.makeText(StartGame.this, "You do not have enough money", Toast.LENGTH_LONG).show();
-
                          }
 
+
                          break;
+
+                     case 3:
+                         // health -3
+                         heal = heal - 3;
+                         Heal.setText(Integer.toString(heal));
                  }
             }
         });
@@ -1005,6 +1032,7 @@ public class StartGame extends Activity {
                 switch (event)
                 {
                     case 1:
+                        // money less 0.1 of it
                         double a;
                         a = moneyc;
                         a = Math.ceil(a * 0.9);
@@ -1012,6 +1040,12 @@ public class StartGame extends Activity {
                         Money.setText(Integer.toString(moneyc));
                         break;
                     case 2:
+                        break;
+
+                    case 3:
+                        // health -3
+                        heal = heal - 3;
+                        Heal.setText(Integer.toString(heal));
                         break;
 
                 }
@@ -1035,15 +1069,20 @@ public class StartGame extends Activity {
 
         event2 = random1.nextInt(100);
         //setting percentage of event
-        if (0<= event2 && event2<= 20 )
+        if (0<= event2 && event2<= 30 )
         {
             event = 1;
-        }else
+        }else if (event2 >30 && event2 <= 60)
         {
             event = 2;
+        }else if (event2 > 60 && event2 <= 100)
+        {
+            event = 3;
         }
 
 
+
+        //set event AlertDiaLog's massage and button
         switch (event){
             case 1:
                 msg = "You walked down the street and someone stole the wallet. \n He leave note 'pool man' (money Money has been reduced 10%)";
@@ -1055,6 +1094,10 @@ public class StartGame extends Activity {
                         "\n You decide to buy one";
                 btn1 = "buy it(100$)";
                 btn2 = "This is scam";
+                break;
+            case 3:
+                msg = "When you walked down the street, you met a drunkard. The drunkard hit you a punch. (Health - 3)";
+                btn1 = "Ok";
 
 
         }
@@ -1154,6 +1197,8 @@ public class StartGame extends Activity {
                 //save scores
                 saveScore();
                 //finish the class
+                Intent i = new Intent(StartGame.this,MainActivity.class);
+                startActivity(i);
                 StartGame.this.finish();
 
             }
@@ -1163,6 +1208,8 @@ public class StartGame extends Activity {
             public void onClick(DialogInterface dialog, int which) {
 
                 //finish class
+                Intent i = new Intent(StartGame.this,MainActivity.class);
+                startActivity(i);
                     StartGame.this.finish();
             }
         });
@@ -1172,7 +1219,12 @@ public class StartGame extends Activity {
 
     }
 
-
+    /**
+     * get the data from sub activity (CarSellsActivity)
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -1213,7 +1265,7 @@ public class StartGame extends Activity {
 
     private void saveScore()
     {
-
+        //save format
         String data = "Name: "+name + "                   Assets: $"+ total_money;
 
         FileOutputStream out = null;

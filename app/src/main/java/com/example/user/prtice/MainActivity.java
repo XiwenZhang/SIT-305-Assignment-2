@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
 
 
 
-        //set bold
+        //set bold of font
         TextPaint tp = title.getPaint();
         tp.setFakeBoldText(true);
 
@@ -70,10 +70,11 @@ public class MainActivity extends Activity {
     // exit app
     protected void Exit(View view)
     {
-        finish();
+        System.exit(0);//exit app
     }
 
     protected void ScoreList(View view){
+        //intent page
         Intent intent = new Intent(this,ScoreListActivity.class);
         startActivity(intent);
     }

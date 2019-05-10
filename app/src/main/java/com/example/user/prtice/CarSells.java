@@ -34,22 +34,24 @@ public class CarSells extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.carsells);
-
+        // set button
         b1 = findViewById(R.id.st);
         b2 = findViewById(R.id.gtr);
         b3 = findViewById(R.id.bg);
         back = findViewById(R.id.button5);
 
+        //set text view
         t1 = findViewById(R.id.textView);
         t2 = findViewById(R.id.textView2);
         t3 = findViewById(R.id.textView3);
         t4 = findViewById(R.id.textView4);
 
+        //set money for each car
         t1.setText("$50,000");
         t2.setText("$200,000");
         t3.setText("$600,000");
 
-        //set TextView
+        //set font of TextView
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/ftt.otf");
         t1.setTypeface(font);
         t2.setTypeface(font);
@@ -92,14 +94,17 @@ public class CarSells extends Activity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //check money enough
                 if (money < 50000)
                 {
                     Toast.makeText(CarSells.this, "You do not have enough money ", Toast.LENGTH_LONG).show();
                 }else if ( money >= 50000){
-
+                    // money reset after buy car
                     money = money - 50000;
                     car1 =1;
+                    //button set enable after car buy
                     b1.setEnabled(false);
+                    //set money
                     t4.setText("I have: $"+Integer.toString(money));
                     b1.setText("Sell Out");
 
@@ -111,12 +116,15 @@ public class CarSells extends Activity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //check money enough
                 if (money < 200000)
                 {
                     Toast.makeText(CarSells.this, "You do not have enough money ", Toast.LENGTH_LONG).show();
                 }else if( money >=200000) {
+                    //set money after buy car
                     money = money - 200000;
                     car2 =1;
+                    //set button enable
                     b2.setEnabled(false);
                     t4.setText("I have: $"+Integer.toString(money));
                     b2.setText("Sell Out");
@@ -129,12 +137,18 @@ public class CarSells extends Activity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //check money enough
+
                 if (money < 600000)
                 {
                     Toast.makeText(CarSells.this, "You do not have enough money ", Toast.LENGTH_LONG).show();
                 }else if(money >= 600000){
+                    // money reset after buy car
+
                     money = money - 600000;
                     car3 = 1;
+                    //set button enable
+
                     b3.setEnabled(false);
                     t4.setText("I have: $"+Integer.toString(money));
                     b3.setText("Sell Out");
