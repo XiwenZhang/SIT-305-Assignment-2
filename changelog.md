@@ -63,3 +63,7 @@
 - Good progress. Glad to see it's getting closer. Final stretch now.
 - Not sure why this file is named oddly? Change it back as soon as you can.
 - Make sure you go over everything in the Grading Criteria super carefully, to ensure you meet each point.
+
+# Week 9, [10/5/2019 - 11/5/2019]
+- Adding more events in Hang out(3 Hrs)[10th]
+- Doing the Video and Criteria
