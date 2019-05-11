@@ -25,7 +25,7 @@
 - Feedback: I want you to start writing the time taken per changelog item (in brackets at the end of each line), so that you can see where time is being spent / not being spent enough. [Henry]
 
 
-#Week 7(14/4/2019 - 18/4/2019)
+# Week 7(14/4/2019 - 18/4/2019)
 - Adding the xml parser for achieve items information and the file in with font.(4 Hrs)(14th)
 - Adding fonts for TextView and Button (2 Hrs)(14th)
 - Adding ListView shopping system(When you touch the market ListView can buy items)(5 Hrs)(15th)
@@ -43,7 +43,7 @@
 
 - Next week( mid- break) will adding the back ground, finish the selling system  and other items. The game will finish before week 9.
 
-#Week 7 [24/4/2019 - 27/4/2019]
+# Week 7 [24/4/2019 - 27/4/2019]
 - Adding CarSell action, player can buy cars by CarDealer Btn.Its has done  Data exchange, Activity connection and CarSellsActivity is Sub Activity for StarGameActivity.(4 Hrs)[24th]
 - Fixing UI design.(3Hrs) [24th]
 - Adding the NewWeek Price event including (Gold Price rise and down, IPhone Price rise and down)(4 Hrs)[25th]
