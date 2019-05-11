@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/Days"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/60"
+        android:textColor="#87CEFA"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="670dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <Button
+        android:id="@+id/NewDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_style"
+        android:text="New Week"
+        android:textColor="#d1d1cc"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <Button
+        android:id="@+id/Hunt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_style"
+        android:text="Hang out"
+        android:textColor="#d1d1cc"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="389dp" />
+
+    <Button
+        android:id="@+id/Items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_style"
+        android:text="Hospital"
+        android:textColor="#d1d1cc"
+        tools:layout_editor_absoluteX="272dp"
+        tools:layout_editor_absoluteY="389dp" />
+
+    <Button
+        android:id="@+id/Exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_style"
+        android:text="Exit"
+        android:textColor="#d1d1cc"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="3000"
+        android:textColor="#FFD700
+"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="255dp" />
+
+    <TextView
+        android:id="@+id/display2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Money:"
+        android:textColor="#FFFFE0"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="255dp" />
+
+    <TextView
+        android:id="@+id/display1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weeks:"
+        android:textColor="#87CEFA"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="593dp"
+        tools:layout_editor_absoluteY="11dp" />
+
+    <ListView
+        android:id="@+id/markee"
+        android:layout_width="0dp"
+        android:layout_height="178dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginRight="116dp"
+        android:layout_marginBottom="94dp"
+        android:background="@drawable/board"
+        android:divider="#FFFFE0"
+        android:dividerHeight="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/display2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/display3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.329" />
+
+    <TextView
+        android:id="@+id/health"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Health:"
+        android:textColor="#FFFFE0"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <TextView
+        android:id="@+id/heal"
+        android:layout_width="44dp"
+        android:layout_height="27dp"
+        android:text="100"
+        android:textColor="#7CFC00
+"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <ListView
+        android:id="@+id/myitems"
+        android:layout_width="370dp"
+        android:layout_height="288dp"
+        android:layout_marginStart="391dp"
+        android:layout_marginLeft="391dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/board"
+        android:divider="#FFFFE0"
+        android:dividerHeight="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="@+id/markee"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <TextView
+        android:id="@+id/display3"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/board"
+        android:text=" MyItems:"
+        android:textColor="#FFFFE0"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="574dp"
+        tools:layout_editor_absoluteY="115dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_style"
+        android:text="Car Dealer"
+        android:textColor="#d1d1cc"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="389dp" />
+
+    <TextView
+        android:id="@+id/cars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/board"
+        android:text="  My Cars:"
+        android:textColor="#FFFFE0"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="426dp"
+        tools:layout_editor_absoluteY="368dp" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/Days"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="1/60"
+        android:textColor="#87CEFA"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/display1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/NewDay"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="247dp"
+        android:background="@drawable/my_style"
+        android:text="New Week"
+        android:textColor="#d1d1cc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Items"
+        app:layout_constraintTop_toBottomOf="@+id/display1" />
+
+    <Button
+        android:id="@+id/Hunt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:background="@drawable/my_style"
+        android:text="Hang out"
+        android:textColor="#d1d1cc"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:layout_marginBottom="307dp"
+        android:background="@drawable/my_style"
+        android:text="Hospital"
+        android:textColor="#d1d1cc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/cars" />
+
+    <Button
+        android:id="@+id/Exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="131dp"
+        android:background="@drawable/my_style"
+        android:text="Exit"
+        android:textColor="#d1d1cc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/NewDay"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="222dp"
+        android:layout_marginRight="222dp"
+        android:layout_marginBottom="4dp"
+
+        android:text="3000"
+        android:textColor="#FFD700
+"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/heal"
+        app:layout_constraintEnd_toStartOf="@+id/cars"
+        app:layout_constraintStart_toEndOf="@+id/display2" />
+
+    <TextView
+        android:id="@+id/display2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginLeft="8dp"
+
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:text="Money:"
+        android:textColor="#FFFFE0"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/health"
+        app:layout_constraintEnd_toStartOf="@+id/money"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/markee" />
+
+    <TextView
+        android:id="@+id/display1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="358dp"
+        android:layout_marginLeft="358dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:layout_marginBottom="639dp"
+        android:text="Weeks:"
+        android:textColor="#87CEFA
+"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/NewDay"
+        app:layout_constraintEnd_toStartOf="@+id/Days"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/markee"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginRight="116dp"
+        android:layout_marginBottom="94dp"
+        android:background="@drawable/board"
+        android:divider="#FFFFE0"
+        android:dividerHeight="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/display2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/display3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <TextView
+        android:id="@+id/health"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="308dp"
+        android:layout_marginRight="308dp"
+        android:layout_marginBottom="87dp"
+        android:text="Health:"
+        android:textColor="#FFFFE0"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/cars"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/display2" />
+
+    <TextView
+        android:id="@+id/heal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="100"
+        android:textColor="#7CFC00
+"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/health"
+        app:layout_constraintEnd_toEndOf="@+id/money"
+        app:layout_constraintStart_toStartOf="@+id/money"
+        app:layout_constraintTop_toTopOf="@+id/health" />
+
+    <ListView
+        android:id="@+id/myitems"
+        android:layout_width="241dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="391dp"
+        android:layout_marginLeft="391dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/board"
+        android:divider="#FFFFE0"
+        android:dividerHeight="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/cars"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/markee"
+        app:layout_constraintTop_toBottomOf="@+id/display3"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/display3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/board"
+        android:text=" MyItems:"
+        android:textColor="#FFFFE0"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/myitems"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/markee"
+        app:layout_constraintTop_toBottomOf="@+id/display1" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="128dp"
+        android:background="@drawable/my_style"
+        android:text="Car Dealer"
+        android:textColor="#d1d1cc"
+        app:layout_constraintBottom_toTopOf="@+id/Exit"
+        app:layout_constraintEnd_toStartOf="@+id/Items"
+        app:layout_constraintStart_toEndOf="@+id/Hunt"
+        app:layout_constraintTop_toBottomOf="@+id/health" />
+
+    <TextView
+        android:id="@+id/cars"
+        android:layout_width="0dp"
+        android:layout_height="143dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/board"
+        android:text="  My Cars:"
+        android:textColor="#FFFFE0"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/Items"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/health"
+        app:layout_constraintTop_toBottomOf="@+id/myitems" />
+
+</android.support.constraint.ConstraintLayout>
