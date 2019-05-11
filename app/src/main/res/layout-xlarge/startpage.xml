@@ -12,84 +12,108 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="212dp"
+        android:layout_marginLeft="212dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="210dp"
+        android:layout_marginRight="210dp"
         android:text="1/60"
         android:textColor="#87CEFA"
         android:textSize="30dp"
-        tools:layout_editor_absoluteX="670dp"
-        tools:layout_editor_absoluteY="8dp" />
+        app:layout_constraintEnd_toEndOf="@+id/myitems"
+        app:layout_constraintStart_toEndOf="@+id/markee"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/NewDay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/my_style"
         android:text="New Week"
         android:textColor="#d1d1cc"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="476dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/Hunt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
         android:background="@drawable/my_style"
         android:text="Hang out"
         android:textColor="#d1d1cc"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="389dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/Items"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
         android:background="@drawable/my_style"
         android:text="Hospital"
         android:textColor="#d1d1cc"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="389dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/button" />
 
     <Button
         android:id="@+id/Exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/my_style"
         android:text="Exit"
         android:textColor="#d1d1cc"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="476dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/NewDay" />
 
     <TextView
         android:id="@+id/money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
         android:text="3000"
         android:textColor="#FFD700
 "
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="255dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/display2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/display2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
         android:text="Money:"
         android:textColor="#FFFFE0"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="255dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/money"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/display1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
         android:text="Weeks:"
         android:textColor="#87CEFA"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="593dp"
-        tools:layout_editor_absoluteY="11dp" />
+        app:layout_constraintEnd_toStartOf="@+id/Days"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/markee"
@@ -116,22 +140,28 @@
         android:id="@+id/health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
         android:text="Health:"
         android:textColor="#FFFFE0"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="311dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/heal"
+        app:layout_constraintEnd_toStartOf="@+id/heal" />
 
     <TextView
         android:id="@+id/heal"
-        android:layout_width="44dp"
+        android:layout_width="0dp"
         android:layout_height="27dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="51dp"
         android:text="100"
         android:textColor="#7CFC00
 "
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="311dp" />
+        app:layout_constraintBottom_toTopOf="@+id/Hunt"
+        app:layout_constraintEnd_toEndOf="@+id/money"
+        app:layout_constraintStart_toStartOf="@+id/money"
+        app:layout_constraintTop_toTopOf="@+id/money" />
 
     <ListView
         android:id="@+id/myitems"
@@ -139,46 +169,58 @@
         android:layout_height="288dp"
         android:layout_marginStart="391dp"
         android:layout_marginLeft="391dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
+        android:layout_marginBottom="103dp"
         android:background="@drawable/board"
         android:divider="#FFFFE0"
         android:dividerHeight="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.932"
         app:layout_constraintStart_toStartOf="@+id/markee"
-        tools:layout_editor_absoluteY="149dp" />
+        app:layout_constraintTop_toBottomOf="@+id/Days" />
 
     <TextView
         android:id="@+id/display3"
         android:layout_width="410dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="574dp"
+        android:layout_marginLeft="574dp"
+        android:layout_marginBottom="7dp"
         android:background="@drawable/board"
         android:text=" MyItems:"
         android:textColor="#FFFFE0"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="574dp"
-        tools:layout_editor_absoluteY="115dp" />
+        app:layout_constraintBottom_toTopOf="@+id/myitems"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginBottom="39dp"
         android:background="@drawable/my_style"
         android:text="Car Dealer"
         android:textColor="#d1d1cc"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="389dp" />
+        app:layout_constraintBottom_toTopOf="@+id/Exit"
+        app:layout_constraintStart_toEndOf="@+id/Hunt" />
 
     <TextView
         android:id="@+id/cars"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginRight="155dp"
         android:background="@drawable/board"
         android:text="  My Cars:"
         android:textColor="#FFFFE0"
         android:textSize="15dp"
-        tools:layout_editor_absoluteX="426dp"
-        tools:layout_editor_absoluteY="368dp" />
+        app:layout_constraintEnd_toEndOf="@+id/markee"
+        app:layout_constraintTop_toBottomOf="@+id/markee" />
 
 </android.support.constraint.ConstraintLayout>
