@@ -1,4 +1,4 @@
-package com.example.user.prtice;
+package com.example.user.SIT305Assignment2;
 
 import android.content.Context;
 import android.util.TypedValue;

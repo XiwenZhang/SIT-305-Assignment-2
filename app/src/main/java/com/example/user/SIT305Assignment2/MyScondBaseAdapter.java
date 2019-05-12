@@ -1,6 +1,5 @@
-package com.example.user.prtice;
+package com.example.user.SIT305Assignment2;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

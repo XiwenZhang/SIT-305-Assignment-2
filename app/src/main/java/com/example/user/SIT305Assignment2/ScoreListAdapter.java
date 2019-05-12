@@ -1,18 +1,13 @@
-package com.example.user.prtice;
+package com.example.user.SIT305Assignment2;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ScoreListAdapter extends BaseAdapter {

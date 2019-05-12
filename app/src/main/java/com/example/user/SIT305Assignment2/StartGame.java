@@ -1,52 +1,33 @@
 
 
 
-package com.example.user.prtice;
+package com.example.user.SIT305Assignment2;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.KeyguardManager;
-import android.content.ClipData;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.content.res.XmlResourceParser;
 import android.graphics.Typeface;
-import android.net.Uri;
-import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPropertyAnimatorCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
-import android.util.Log;
-import android.view.Display;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.view.View;
 import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
-import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InterruptedIOException;
 import java.io.OutputStreamWriter;
-import java.lang.reflect.Type;
-import java.security.PrivateKey;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;

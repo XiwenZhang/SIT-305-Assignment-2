@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.user.prtice">
+    package="com.example.user.SIT305Assignment2">
 
     <application
         android:allowBackup="true"
@@ -10,18 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".StartGame" android:launchMode="standard" >
+        <activity android:name="com.example.user.SIT305Assignment2.StartGame" android:launchMode="standard" >
 
             </activity>
 
-        <activity android:name=".ScoreListActivity"
+        <activity android:name="com.example.user.SIT305Assignment2.ScoreListActivity"
         ></activity>
-        <activity android:name=".HelpActivity"
+        <activity android:name="com.example.user.SIT305Assignment2.HelpActivity"
             ></activity>
-        <activity android:name=".CarSells" android:launchMode="standard"
+        <activity android:name="com.example.user.SIT305Assignment2.CarSells" android:launchMode="standard"
             ></activity>
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.user.SIT305Assignment2.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
