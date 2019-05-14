@@ -20,7 +20,8 @@
             ></activity>
         <activity android:name="com.example.user.SIT305Assignment2.CarSells" android:launchMode="standard"
             ></activity>
-
+        <activity android:name="com.example.user.SIT305Assignment2.AboutActivity" android:launchMode="standard"
+            ></activity>
         <activity android:name="com.example.user.SIT305Assignment2.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

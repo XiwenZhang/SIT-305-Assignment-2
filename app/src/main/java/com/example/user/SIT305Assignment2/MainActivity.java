@@ -21,6 +21,7 @@ public class MainActivity extends Activity {
     private Button start;
     private Button SS;
     private Button exit;
+    private Button about;
     private TextView title;
 
 
@@ -38,6 +39,7 @@ public class MainActivity extends Activity {
          SS = (Button) findViewById(R.id.Scorelist);
          exit = (Button) findViewById(R.id.Exit);
         title = findViewById(R.id.textView5);
+        about = findViewById(R.id.About);
 
         //set text type
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/ftt.otf");
@@ -57,6 +59,14 @@ public class MainActivity extends Activity {
                  startActivity(intent);
              }
          });
+
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,AboutActivity.class);
+                    startActivity(i);
+            }
+        });
     }
 
 
