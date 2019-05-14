@@ -67,3 +67,8 @@
 # Week 9, [10/5/2019 - 11/5/2019]
 - Adding more events in Hang out(3 Hrs)[10th]
 - Doing the Video and Criteria
+
+# Week 10, [13/5/2019 - 14/5/2019]
+- Adding About page and adding hyperlink for souce page(3 Hrs)[13th]
+- Screen working(for each size)(3 Hrs)[13th]
+- Video made (5 Hrs)[14th]

@@ -1,10 +1,12 @@
 package com.example.user.SIT305Assignment2;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -40,7 +42,15 @@ public class AboutActivity extends Activity {
         t2.append(Html.fromHtml("<a href ='http://font.chinaz.com/190424411950.htm'> ftt.otf</a>"));
         t2.append("\n\tLicense type: Public Domain\n\tAuthor: 魔幻琪琪 ");
 
-
+        back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent to page
+                Intent i = new Intent(AboutActivity.this,MainActivity.class);
+                startActivity(i);
+            }
+        });
 
         //set moving hyperlink
         t2.setMovementMethod(LinkMovementMethod.getInstance());

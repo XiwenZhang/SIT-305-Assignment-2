@@ -167,15 +167,6 @@ public class StartGame extends Activity {
         Display3.setTypeface(font);
         Cars.setTypeface(font);
 
-        /**
-         * setting the save file doc
-         */
-
-
-
-
-
-
 
         Newdays.setTypeface(font);
 
@@ -902,7 +893,8 @@ public class StartGame extends Activity {
                         if ("allitems".equals(name)) {
                             sell = new ArrayList<>();
 
-                        } else if ("item".equals(name)) {   //get the item and create a new ItemAdapter to save data
+                        } else if ("item".equals(name)) {
+                            //get the item and create a new ItemAdapter to save data
                             //get the ID of single item
                             item = new ItemAdapter();
                             item.setID(Integer.parseInt(parser.getAttributeValue(0)));
