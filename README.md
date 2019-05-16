@@ -25,3 +25,5 @@ SID 217449804 (Xiwen Zhang)
 - Game has 60 weeks per week as a round, when the 60 weeks finish will gameover
 - Every week has random event about single price higher or lower, and each item also has little change of price per week
 - The game target is to buy all cars and make money.
+==============================================
+API: 'com.android.tools.build:gradle:3.2.0'
